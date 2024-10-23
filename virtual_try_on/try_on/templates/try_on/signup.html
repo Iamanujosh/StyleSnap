@@ -10,9 +10,9 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
+            padding: 120;
             font-family: Arial, sans-serif;
-            background-color: rgb(232, 232, 245);
+            background-color: #E6E6FA;
             color: white;
             display: flex;
             justify-content: center;
@@ -21,16 +21,16 @@
         }
 
         .container {
+            margin-top: 150px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image:url('https://thumbs.dreamstime.com/b/blue-sky-clouds-image-watercolor-cartoon-style-rough-background-texture-blue-sky-clouds-image-watercolor-cartoon-120237164.jpg');
+            background-color: #d52349;
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-            max-width: 700px;
+            max-width: 900px;
             width: 100%;
-            margin-top: 150px;
         }
 
         .form-container {
@@ -66,10 +66,10 @@
             width: 100%;
             padding: 12px;
             margin: 10px 0;
-            border: 1px solid #30363d;
+            border: 1px solid #f0f2f5;
             border-radius: 6px;
-            background-color: #eceff2;
-            color: white;
+            background-color: #e2e7ee;
+            color: rgb(6, 5, 5);
             box-sizing: border-box;
         }
 
@@ -85,7 +85,7 @@
             text-align: left;
             margin: 10px 0;
             padding-left: 20px;
-            color: #4a8ca8;
+            color: #f85149;
             font-size: 12px;
         }
 
@@ -137,7 +137,20 @@
                 <button type="submit">Register</button>
             </form>
 
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
             <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+        </div>
+
+        <div class="image-container">
+            <img src="https://plus.unsplash.com/premium_photo-1675186049419-d48f4b28fe7c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNsb3RoZXN8ZW58MHx8MHx8fDA=" alt="Task Illustration">
+            <p>Manage your tasks in a more efficient way with Tasky...</p>
         </div>
     </div>
 </body>

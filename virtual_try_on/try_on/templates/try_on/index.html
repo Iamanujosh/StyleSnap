@@ -1,3 +1,5 @@
+
+{% load static %}
 <!DOCTYPE HTML>
 <!--
 	Dopetrope by HTML5 UP
@@ -6,10 +8,11 @@
 -->
 <html>
 	<head>
-		<title>Dopetrope by HTML5 UP</title>
+		<title>StyleSnap</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="{% static 'css/main2.css' %}"/>
+		<link rel="stylesheet" href="{% static 'css/fontawesome-all.css' %}"/>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -18,44 +21,31 @@
 				<section id="header">
 
 					<!-- Logo -->
-						<h1><a href="index.html">Dopetrope</a></h1>
+						<h1><a href="index.html">StyleSnap</a></h1>
 
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
 								<li class="current"><a href="index.html">Home</a></li>
 								<li>
-									<a href="#">Dropdown</a>
-									<ul>
-										<li><a href="#">Lorem ipsum dolor</a></li>
-										<li><a href="#">Magna phasellus</a></li>
-										<li><a href="#">Etiam dolore nisl</a></li>
-										<li>
-											<a href="#">Phasellus consequat</a>
-											<ul>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam dolore nisl</a></li>
-												<li><a href="#">Veroeros feugiat</a></li>
-												<li><a href="#">Nisl sed aliquam</a></li>
-												<li><a href="#">Dolore adipiscing</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Veroeros feugiat</a></li>
-									</ul>
-								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								<li><a href="{% url 'chatbot' %}">Chat With Bot</a></li>
+								<li><a href="{% url 'profile' %}">Profile</a></li>
+								<li><a href="{% url 'wardrobe' %}">Virtual Wardrobe</a></li>
+								<li><a href="{% url 'user_quiz' %}">Take a Quize</a></li>
 							</ul>
 						</nav>
 
 					<!-- Banner -->
-						<section id="banner">
+						<<section id="banner">
 							<header>
-								<h2>Howdy. This is Dopetrope.</h2>
-								<p>A responsive template by HTML5 UP</p>
+								<h2>StyleSnap. Where Fashion Meets Intelligence</h2>
+								<ul class="button-container">
+									<li id="login"><a href="{% url 'login' %}">Login</a></li>
+									<li id="signup"><a href="{% url 'signup' %}">Signup</a></li>
+								</ul>
 							</header>
 						</section>
+						
 
 					<!-- Intro -->
 						<section id="intro" class="container">
@@ -64,34 +54,34 @@
 									<section class="first">
 										<i class="icon solid featured fa-cog"></i>
 										<header>
-											<h2>Ipsum consequat</h2>
+											<h2>Tailored Outfit Suggestions</h2>
 										</header>
-										<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
+										<p>Get personalized outfit ideas curated just for you based on your preferences, body type, and occasions. Never run out of fashion inspiration!</p>
 									</section>
 								</div>
 								<div class="col-4 col-12-medium">
 									<section class="middle">
 										<i class="icon solid featured alt fa-bolt"></i>
 										<header>
-											<h2>Magna etiam dolor</h2>
+											<h2>Try Before You Buy</h2>
 										</header>
-										<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
+										<p>Upload your pictures and see how clothes fit with our virtual try-on feature. Discover your perfect look without stepping into a store!</p>
 									</section>
 								</div>
 								<div class="col-4 col-12-medium">
 									<section class="last">
 										<i class="icon solid featured alt2 fa-star"></i>
 										<header>
-											<h2>Tempus adipiscing</h2>
+											<h2>Embrace Sustainability</h2>
 										</header>
-										<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
+										<p>Find eco-conscious brands and sustainable fashion choices that align with your values. Dress smart while caring for the planet!</p>
 									</section>
 								</div>
 							</div>
 							<footer>
 								<ul class="actions">
-									<li><a href="#" class="button large">Get Started</a></li>
-									<li><a href="#" class="button alt large">Learn More</a></li>
+									<li><a href="{% url 'login' %}" class="button large">Get Started</a></li>
+
 								</ul>
 							</footer>
 						</section>
@@ -107,89 +97,47 @@
 								<!-- Portfolio -->
 									<section>
 										<header class="major">
-											<h2>My Portfolio</h2>
+											<h2>Features of StyleSnap</h2>
 										</header>
 										<div class="row">
 											<div class="col-4 col-6-medium col-12-small">
 												<section class="box">
-													<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+													<a href="#" class="image featured"><img src="https://html5up.net/uploads/demos/dopetrope/images/pic03.jpg" alt="" /></a>
 													<header>
-														<h3>Ipsum feugiat et dolor</h3>
+														<h3>Try Before You Buy</h3>
 													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
+													<p>Experiment with new styles from the comfort of your home! Our Virtual Try-On feature allows you to see how clothes look on you—just upload your photo and try them on virtually.</p>
 													<footer>
 														<ul class="actions">
-															<li><a href="#" class="button alt">Find out more</a></li>
+															<li><a href="{% url 'home' %}" class="button alt">Find out more</a></li>
 														</ul>
 													</footer>
 												</section>
 											</div>
 											<div class="col-4 col-6-medium col-12-small">
 												<section class="box">
-													<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+													<a href="#" class="image featured"><img src="https://html5up.net/uploads/demos/dopetrope/images/pic04.jpg" alt="" /></a>
 													<header>
-														<h3>Sed etiam lorem nulla</h3>
+														<h3>Organize Your Closet with Ease</h3>
 													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
+													<p>Say goodbye to clutter! Manage all your outfits in one place with our Digital Wardrobe. Track what you own, plan outfits for occasions, and never lose track of your favorite pieces."</p>
 													<footer>
 														<ul class="actions">
-															<li><a href="#" class="button alt">Find out more</a></li>
+															<li><a href="{% url 'wardrobe' %}" class="button alt">Find out more</a></li>
 														</ul>
 													</footer>
 												</section>
 											</div>
 											<div class="col-4 col-6-medium col-12-small">
 												<section class="box">
-													<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+													<a href="#" class="image featured"><img src="https://html5up.net/uploads/demos/dopetrope/images/pic05.jpg" alt="" /></a>
 													<header>
-														<h3>Consequat et tempus</h3>
+														<h3>Your Personal Stylist at Your Fingertips</h3>
 													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
+													<p>Need instant style advice? Chat with our AI-powered Fashion Chatbot to get personalized outfit suggestions, trend updates, and shopping tips based on your preferences.</p>
 													<footer>
 														<ul class="actions">
-															<li><a href="#" class="button alt">Find out more</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>
-											<div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-													<header>
-														<h3>Blandit sed adipiscing</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<ul class="actions">
-															<li><a href="#" class="button alt">Find out more</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>
-											<div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-													<header>
-														<h3>Etiam nisl consequat</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<ul class="actions">
-															<li><a href="#" class="button alt">Find out more</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>
-											<div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a href="#" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
-													<header>
-														<h3>Dolore nisl feugiat</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<ul class="actions">
-															<li><a href="#" class="button alt">Find out more</a></li>
+															<li><a href="{% url 'chatbot' %}" class="button alt">Find out more</a></li>
 														</ul>
 													</footer>
 												</section>
@@ -381,12 +329,12 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="{static 'js/jquery.min.js'}"></script>
+			<script src="{static 'js/jquery.dropotron.min.js'}"></script>
+			<script src="{static 'js/browser.min.js'}"></script>
+			<script src="{static 'js/breakpoints.min.js'}"></script>
+			<script src="{static 'js/util.js'}"></script>
+			<script src="{static 'js/main.js'}"></script>
 
 	</body>
 </html>

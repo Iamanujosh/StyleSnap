@@ -5,28 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat with Bot</title>
     <style>
-        body {
-            background-color: white;
-            background-size: cover;
-            background-position: center;
-            color: white;
-            font-family: Arial, sans-serif;
+          body {
+            background-image: url('https://m.media-amazon.com/images/I/813sZhB2AeL._AC_UF894,1000_QL80_.jpg'); /* Replace with your background image URL */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            color: #4F4F4F; /* Darker text for contrast */
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
-            background-color: #E6E6FA;
         }
 
         header {
-            padding: 10px 20px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: relative;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+            border-bottom: 2px solid #A87CA0; /* Stylish border */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: bold;
-            color: #333;
+            color: #A87CA0;
         }
 
         .hamburger {
@@ -34,14 +35,14 @@
             cursor: pointer;
             background: none;
             border: none;
-            color: #333;
+            color: #A87CA0;
         }
 
         .nav-links {
-            display: none; /* Hidden by default */
+            display: none;
             position: absolute;
             top: 60px;
-            background-color: #D8BFD8;
+            background-color: #F6E7E8; /* Light beige */
             border-radius: 5px;
             list-style: none;
             padding: 10px;
@@ -56,32 +57,29 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
+            color: #6A6A6A;
             font-weight: bold;
         }
 
-        .show {
-            display: block;
-        }
-
         .chat-container {
-            margin-top: 100px;
+            margin-top: 20px;
             width: 80%;
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #b0ccf1;
+            background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
         .chat-messages {
             height: 400px;
             overflow-y: scroll;
             padding: 10px;
-            background-color: #F3E5F5;
+            background-color: #eae8e1; /* Light beige */
             border-radius: 10px;
             margin-bottom: 20px;
+            color: #4F4F4F;
         }
 
         .message {
@@ -91,20 +89,22 @@
         }
 
         .message.user {
-            background-color: #98FF98;
-            color: #333;
+            background-color: #d8f3dc; /* Light green */
+            color: #4F4F4F;
             text-align: right;
         }
 
         .message.bot {
-            background-color: #ADD8E6;
-            color: #333;
+            background-color: #f9f3f3; /* Light pink */
+            color: #4F4F4F;
             text-align: left;
+            border: 1px solid #D1D1D1; /* Light border for contrast */
         }
 
         .chat-input {
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
 
         .chat-input input[type="text"] {
@@ -113,24 +113,26 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             margin-right: 10px;
+            background-color: #fdf6e3; /* Very light beige */
         }
 
         .chat-input button {
-            background-color: #9B59B6;
+            background-color: #A87CA0; /* Fashionable color */
             color: white;
             padding: 10px;
             border: none;
             border-radius: 6px;
             width: 80px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
 
         .chat-input button:hover {
-            background-color: #2ea043;
+            background-color: #A67CA0; /* Darker shade on hover */
         }
 
         .custom-file-upload {
-            background-color: #9B59B6;
+            background-color: #A87CA0; /* Fashionable color */
             border: none;
             border-radius: 8px;
             color: #ffffff;
@@ -138,10 +140,11 @@
             padding: 8px 16px;
             text-align: center;
             margin-left: 10px;
+            transition: background-color 0.3s;
         }
 
         .custom-file-upload:hover {
-            background-color: #2ea043;
+            background-color: #A67CA0; /* Darker shade on hover */
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>

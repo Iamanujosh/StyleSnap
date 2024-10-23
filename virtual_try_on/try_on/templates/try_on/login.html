@@ -13,7 +13,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: rgb(232, 232, 245);
+            background: white;
             color: white;
             display: flex;
             justify-content: center;
@@ -25,11 +25,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image:url('https://thumbs.dreamstime.com/b/blue-sky-clouds-image-watercolor-cartoon-style-rough-background-texture-blue-sky-clouds-image-watercolor-cartoon-120237164.jpg');
+            background: #d52349;
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-            max-width: 700px;
+            max-width: 900px;
             width: 100%;
             margin-top: 50px;
         }
@@ -38,6 +38,7 @@
             width: 50%;
             padding: 30px;
             text-align: center;
+            background-color: #d52349;;
             
         }
 
@@ -86,7 +87,7 @@
             margin-bottom: 15px;
             border: 1px solid #30363d;
             border-radius: 6px;
-            background-color: white;
+            background: linear-gradient(135deg, #a18cd1, #fbc2eb);
             color: white;
             box-sizing: border-box;
         }
@@ -134,7 +135,8 @@
             margin: 0 10px;
         }
 
-        .google-btn{
+        .google-btn,
+        .github-btn {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -148,16 +150,20 @@
             cursor: pointer;
         }
 
-        .google-btn i{
+        .google-btn i,
+        .github-btn i {
             margin-right: 10px;
         }
 
         .google-btn:hover {
-            background-color: #373adb;
-            border-color: #158fad;
+            background-color: #db4437;
+            border-color: #db4437;
         }
 
-       
+        .github-btn:hover {
+            background-color: #24292e;
+            border-color: #24292e;
+        }
 
         .signup-link {
             margin-top: 20px;
@@ -194,7 +200,7 @@
             text-align: center;
         }
         .form-container button {
-            background-color: blue;
+            background: linear-gradient(135deg, #a18cd1, #fbc2eb);
             color: white;
             padding: 12px;
             width: 100%;
@@ -226,14 +232,14 @@
     <div class="container">
         <div class="form-container">
             <div class="logo">
-                <span class="logo-text">StyleBro</span>
+                <span class="logo-text">StyleSnap</span>
             </div>
             <h1>Welcome Back!</h1>
             <p>Please enter login details below</p>
             <form method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button type="submit">Login</button>
+                <button type="submit">Register</button>
             </form>
 
             {% if messages %}
@@ -247,10 +253,16 @@
                 <hr> <span>Or continue</span> <hr>
             </div>
             <button class="google-btn"><i class="fab fa-google"></i> Log in with Google</button>
+            <button class="github-btn"><i class="fab fa-github"></i> Log in with GitHub</button>
             <div class="signup-link">
                 <p>Don't have an account?</p>
-                <a href="signup.html">Sign up</a>
+                <a href="signin.html">Sign up</a>
             </div>
+        </div>
+
+        <div class="image-container">
+            <img src="https://plus.unsplash.com/premium_photo-1675186049419-d48f4b28fe7c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNsb3RoZXN8ZW58MHx8MHx8fDA=" alt="Task Illustration">
+            <p>Manage your tasks in a more efficient way with Tasky...</p>
         </div>
     </div>
 

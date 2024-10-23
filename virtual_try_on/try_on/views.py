@@ -289,7 +289,7 @@ def register_view(request):
 #home function
 
 def home(request):
-    return render(request,'try_on/home.html')
+    return render(request,'try_on/index.html')
 
 @login_required
 def profile(request):
