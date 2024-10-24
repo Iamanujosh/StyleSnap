@@ -1,1 +1,2 @@
-web: gunicorn virtal_try_on.wsgi
+web: waitress-serve --port=$PORT virtual_try_on.wsgi:application
+
