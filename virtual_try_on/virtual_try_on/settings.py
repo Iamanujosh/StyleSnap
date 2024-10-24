@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '+(nux$=n*o#%hkx-bw#8$zs$wnapuweslbds6-k!*m=-jj+gpf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['virtual_try_on.com']
 
 
 # Application definition
