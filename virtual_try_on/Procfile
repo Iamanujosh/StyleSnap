@@ -1,0 +1,1 @@
+web: gunicorn virtal_try_on.wsgi
