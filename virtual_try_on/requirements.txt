@@ -3,4 +3,4 @@ requests==2.31.0  # For making HTTP requests
 pdfplumber==0.9.0  # For extracting text from PDFs
 Pillow==9.2.0  # Image processing library
 reportlab==3.6.13  # For generating PDFs
-waitress==2.1.2 
+waitress==3.0.0
