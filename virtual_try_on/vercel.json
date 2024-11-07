@@ -1,14 +1,14 @@
 
 {
     "builds": [{
-        "src": "virtual_try_on/wsgi.py",
+        "src": "virtual_try_on/virtual_try_on/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
     }],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "virtual_try_on/wsgi.py"
+            "dest": "virtual_try_on/virtual_try_on/wsgi.py"
         }
     ]
 }
